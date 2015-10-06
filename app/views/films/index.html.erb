@@ -1,7 +1,34 @@
-<table>
+<!-- <table>
   <tr>
     <% @films.each do |film| %>
     <td><ul style="list-style-type:none"><li><%= image_tag(film.thumb_url) %></li><li><%= film.title %></li><li><%= film.release_date %></li><li><%= film.description %></li></ul></td>
     <% end %>
   </tr>
-</table>
+</table> -->
+
+<div class="container">
+  <div class="row">
+    <% @films[0..3].each do |film| %>
+    <div class="col-md-3"><ul style="list-style-type:none"><li><%= image_tag(film.thumb_url) %></li><li><%= film.title %></li><li><%= film.release_date %></li><li><%= film.description %></li></ul>
+    </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <% @films[4..7].each do |film| %>
+    <div class="col-md-3"><ul style="list-style-type:none"><li><%= image_tag(film.thumb_url) %></li><li><%= film.title %></li><li><%= film.release_date %></li><li><%= film.description %></li></ul>
+    </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <% @films[8..11].each do |film| %>
+    <div class="col-md-3"><ul style="list-style-type:none"><li><%= image_tag(film.thumb_url) %></li><li><%= film.title %></li><li><%= film.release_date %></li><li><%= film.description %></li></ul>
+    </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <% @films[12..15].each do |film| %>
+    <div class="col-md-3"><ul style="list-style-type:none"><li><%= image_tag(film.thumb_url) %></li><li><%= film.title %></li><li><%= film.release_date %></li><li><%= film.description %></li></ul>
+    </div>
+    <% end %>
+  </div>
+</div>
