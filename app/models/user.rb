@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
     if TRUSTED_SITES.include? domain
       self.trusted = "trusted"
     else
-      self.trusted = false
+      self.trusted = "untrusted"
     end
   end
 
