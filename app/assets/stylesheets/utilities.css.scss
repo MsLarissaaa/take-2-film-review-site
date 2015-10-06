@@ -23,7 +23,20 @@ ul {
   margin-bottom: 25px;
 }
 
-.radio-position {
-  width: 150px;
+
+#film-show {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  width: 70%;
+
+}
+
+.media {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+
 }
 

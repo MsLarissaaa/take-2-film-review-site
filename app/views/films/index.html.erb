@@ -1,7 +1,17 @@
-<table>
-  <tr>
-    <% @films.each do |film| %>
-    <td><ul style="list-style-type:none"><li><%= image_tag(film.thumb_url) %></li><li><%= film.title %></li><li><%= film.release_date %></li><li><%= film.description %></li></ul></td>
-    <% end %>
-  </tr>
-</table>
+<div class="container">
+  <% @film_slices.each do |slice| %>
+    <div class="row">
+      <% slice.each do |film| %>
+        <div class="col-md-3"><ul style="list-style-type:none">
+          <li><%= link_to film_path(film) do %>
+            <%= image_tag(film.thumb_url) %>
+          <% end %></li>
+          <li><%= film.title %></li></ul>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+
+

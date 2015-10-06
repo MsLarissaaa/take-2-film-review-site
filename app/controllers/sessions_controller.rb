@@ -3,10 +3,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by_email(params[:session][:email])
-    if @user && @user.authenticate(params[:session][:password])
-      session[:user_id] = @user.id
-      redirect_to "/films/index"
+    @user = User.find_by_email(params[:email])
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user_id
+      redirect_to "/films"
+
     else
       @error_message =  "please enter info into both fields"
       render 'new'
@@ -15,7 +16,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to "/films/index"
+    redirect_to "/films"
   end
 
 
