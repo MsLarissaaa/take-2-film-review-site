@@ -14,6 +14,6 @@ require File.expand_path('../config/application', __FILE__)
 
 # RSpec::Core::RakeTask.new
 
-# task :default => [:spec]
+task :default => [:spec]
 
 Rails.application.load_tasks
