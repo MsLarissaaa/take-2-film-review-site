@@ -1,0 +1,24 @@
+<div id="film_container">
+  <div class="media">
+
+    <div class="media-body">
+      <h4 class="media-heading"><%= @film.title %></h4>
+      
+    </div>
+
+    <div class="media-right">
+      <a href= <%= @film.large_url %> >
+        <%= image_tag(@film.large_url, alt: "movie_poster", class: "media-object") %>
+      </a>
+    </div>
+  </div>
+
+  <div id="film_reviews">
+
+  <% @film.reviews.each do |review| %>
+    <%= review.content %>
+
+    review.
+    
+  </div>
+</div>
