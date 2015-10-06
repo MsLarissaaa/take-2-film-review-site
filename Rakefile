@@ -3,17 +3,9 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-# require 'rspec/core/rake_task'
+require 'rspec/core/rake_task'
 
-# task :default => :spec
-# Rspec::Core::RakeTask.new
-
-# task :default => :spec
-
-# require 'rspec/core/rake_task'
-
-# RSpec::Core::RakeTask.new
-
-task :default => [:test]
+task :default => :spec
+Rspec::Core::RakeTask.new
 
 Rails.application.load_tasks
