@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user_id
       redirect_to "/films"
+
     else
       @error_message =  "please enter info into both fields"
       render 'new'
@@ -17,4 +18,6 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to "/films"
   end
+
+
 end
