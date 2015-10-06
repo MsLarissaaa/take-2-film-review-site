@@ -2,10 +2,10 @@ Rails.application.routes.draw do
 
   root "welcome#index"
 
-  get "signup" => "users#new"
+  get "signup" => "users#new", as: "new_user"
   post "signup" => "users#create"
 
-  get "login" => "sessions#new"
+  get "login" => "sessions#new", as: "login"
   post "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
 
