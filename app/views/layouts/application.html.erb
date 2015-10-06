@@ -8,7 +8,16 @@
 </head>
 <body>
 
-<%= yield %>
+
+  <%= render 'shared/navbar' %>
+    <% if current_user %>
+      Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+    <% else %>
+      <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+    <% end %>
+  <div class="main-page-content <%= controller.controller_name %>">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
