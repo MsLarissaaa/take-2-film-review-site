@@ -25,4 +25,5 @@ App live at: http://take2moviereview.herokuapp.com/
 - As a non-logged in user I should not see links for creating reviews or comments.
 - As a non-looged in user I should not be able to vote on reviews or films.
 
-- As a user I want to see a link to my profile on the home page. (STRETCH)
+### Stretch
+- As a user I want to see a link to my profile on the home page. 
