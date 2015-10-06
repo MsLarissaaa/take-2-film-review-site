@@ -1,3 +1,5 @@
+https://travis-ci.org/MsLarissaaa/take-2-film-review-site.svg
+
 Team members: Greg, Larissa, Rodica 
 App live at: http://take2moviereview.herokuapp.com/
 
