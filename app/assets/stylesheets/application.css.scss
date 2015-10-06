@@ -1,2 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#film_container {
+  display: flex;
+  
+}
+.media {
+  background-color: red;
+  width: 500px;
+  height: 300px;
+}
