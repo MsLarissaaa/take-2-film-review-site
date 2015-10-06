@@ -5,6 +5,7 @@ class CreateFilms < ActiveRecord::Migration
       t.date  :release_date
       t.string  :description
       t.string  :thumb_url
+      t.string  :large_url
       t.timestamps null: false
     end
   end

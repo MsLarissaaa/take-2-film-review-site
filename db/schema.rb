@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20151005192901) do
     t.date     "release_date"
     t.string   "description"
     t.string   "thumb_url"
+    t.string   "large_url"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

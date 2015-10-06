@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "welcome#index"
+  root "films#index"
 
   get "signup" => "users#new"
   post "signup" => "users#create"

@@ -1,0 +1,7 @@
+<table>
+  <tr>
+    <% @films.each do |film| %>
+    <td><ul style="list-style-type:none"><li><%= image_tag(film.thumb_url) %></li><li><%= film.title %></li><li><%= film.release_date %></li><li><%= film.description %></li></ul></td>
+    <% end %>
+  </tr>
+</table>
