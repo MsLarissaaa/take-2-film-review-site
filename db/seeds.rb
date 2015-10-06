@@ -6,30 +6,54 @@ Review.delete_all
 Rating.delete_all
 Film.delete_all
 Genre.delete_all
+FilmGenre.delete_all
+
+review_options =
+  ["This movie was great! Very exciting and thought-provoking.",
+    "I fell asleep in the first five minutes.",
+    "I was only there for the popcorn. I hate movies.",
+    "I normally love the actor who plays the main character, but was disappointed in their performance here.",
+    "Excellent screenplay and fabulous direction - this film is a triumph!",
+    "Basically my new favorite movie. It's awesome!",
+    "My girlfriend dragged me to see this when I didn't want to go, but as usual, she was totally right and I loved it. Great film!",
+    "What happened to this producer? Their work used to be so good! Save your money and skip this film.",
+    "Three thumbs way, way up! This film does so much for the triple-thumbed community. We're out of the shadows and enthusiastically expressing approval all over the place!",
+    "I LOVE Charlize Theron. I'm a randomly-generated review, so I don't know whether or not she's actually in this movie, but in any case, she should be.",
+    "This movie rocked my socks off. All the cool people should def go see it.",
+    "Thrilled? Moved? Inspired? ENTERTAINED??! Why yes, yes I was."
+  ]
 
 rating_options = ["good", "bad"]
 
+comment_options =
+  ["I loved this movie. Thanks for the recommendation!",
+    "Omg like totally! You are sooooo right.",
+    "Ugh, don't know about you but I saw this movie too and thought it sucked.",
+    "I agree! So glad others understand.",
+    "I HAVE AN OPINION THAT IS DIFFERENT FROM YOURS AND MY OPINION IS THE RIGHT ONE. YOUR DISAGREEMENT MAKES ME IRATE AND ALSO ENTITLED TO HARM YOU. p.s. Ur cabbage and I know where you live. {incoherent threats}!1!11!!!!!1",
+    "I go to internet comments sections seeking validation and connection. I am frequently disappointed.",
+    "Gee whiz! This review is spot-on. You're a great reviewer!",
+    "Yeah for reals, this movie. I don't know what to say.",
+    "You're wrong about this film. Like, completely off-the-mark wrong. And I have neither the time nor the energy to educate you as to why.",
+    "Leonardo DiCaprio, AMIRITE??",
+    "I wish I had read this review before I saw the movie. Could've saved some time and $$.",
+    "Lol the genre assignment. It's like these people live under a rock or maybe go to some weird bootcamp for nerds who never see a movie. Yikes.",
+    "Go see Mad Max: Fury Road. Just do it.",
+    "Always enjoy your reviews. I think we have all the same tastes in movies!",
+    "Damn, who writes these reviews? I hope they don't get paid for this trash. Yo 'reviewer', go back to Yelp!"
+  ]
+
 users = User.create!([
-  {username: "bob", email: "bob@email.com", password: "password",
-            trusted: "untrusted", admin: false},
-  {username: "mary", email: "mary@email.com", password: "password",
-            trusted: "untrusted", admin: false}
-  ])
-
-reviews = Review.create!([
-  {:reviewer_id => 1, film_id: 1, content: "i fell asleep in the first five minutes."},
-  {:reviewer_id => 2, film_id: 2, content: "i was only there for the popcorn. i hate movies"}
-  ])
-
-reviews.each do |review|
-  rand(0..6).times do
-    review.ratings.create!(:rater => users.sample, :content => rating_options.sample)
-  end
-end
-
-comments = Comment.create!([
-  {review_id: 1, :commenter => users.sample, content: "oh my god, i loved it!"},
-  {review_id: 2, :commenter => users.sample, content: "i couldn't stop crying!"}
+  {username: "ryan", email: "ryan@email.com", password: "password", trusted: "untrusted", admin: false},
+  {username: "nailah", email: "nailah@email.com", password: "password", trusted: "untrusted", admin: false},
+  {username: "rodica", email: "rodica@email.com", password: "password", trusted: "untrusted", admin: false},
+  {username: "greg", email: "greg@email.com", password: "password", trusted: "untrusted", admin: false},
+  {username: "larissa", email: "larissa@email.com", password: "password", trusted: "untrusted", admin: false},
+  {username: "lucas", email: "lucas@email.com", password: "password", trusted: "untrusted", admin: false},
+  {username: "cicadavid", email: "cicadavid@trustedemail.com", password: "password", trusted: "trusted", admin: false},
+  {username: "lasalle", email: "lasalle@trustedemail.com", password: "password", trusted: "trusted", admin: false},
+  {username: "felicia", email: "felicia@trustedemail.com", password: "password", trusted: "trusted", admin: false},
+  {username: "jackson", email: "jackson@trustedemail.com", password: "password", trusted: "trusted", admin: false}
   ])
 
 films = Film.create!([
@@ -112,4 +136,18 @@ film_genres = FilmGenre.create!([
   {:film => Film.find_by_title("No Country for Old Men"), :genre => Genre.find_by_title("drama")},
   {:film => Film.find_by_title("Revolutionary Road"), :genre => Genre.find_by_title("drama")}
   ])
+
+reviews = 65.times.map do
+  Review.create!(:reviewer => users.sample, :film => films.sample, :content => review_options.sample)
+end
+
+reviews.each do |review|
+  rand(0..6).times do
+    review.ratings.create!(:rater => users.sample, :content => rating_options.sample)
+  end
+end
+
+comments = 260.times.map do
+  Comment.create!(:review => reviews.sample, :commenter => users.sample, :content => comment_options.sample)
+end
 
