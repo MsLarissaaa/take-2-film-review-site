@@ -1,9 +1,53 @@
 
-<div class="container-fluid text-center">
-  <h1>Sign Up to make Reviews on Take-2</h1>
+<div class="container-fluid">
 
-  <%= form_for :user, html: { class: "form-horiozontal" } do |f| %>
-    <div class="form-group error-messages">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 text-center">
+      <h1>Sign Up to Start Reviewing Now</h1>
+      <h3>Let your opinion be heard</h3>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+
+  <div class="row main-row">
+      <div class="col-md-6">
+        <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAd9t6VDBiwpjgZIIs6M126MQnoPvOEEH1xDR_yTHWFRPIqCu_QQ" %>
+      </div>
+      <%= form_for :user, html: { class: "form-horiozontal" } do |f| %>
+      <div class="col-md-6 sign-up-form">
+        <div class="form-group text-right">
+          <%= f.label :username, "Username", class: "col-md-5 control-label" %>
+          <div class="col-md-4">
+            <%= f.text_field :username, placeholder: "Username is required", class: "form-control" %>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+
+        <div class="form-group text-right">
+          <%= f.label :email, "Email", class: "col-md-5 control-label" %>
+          <div class="col-md-4">
+            <%= f.text_field :email, placeholder: "Email is required", class: "form-control" %>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+
+        <div class="form-group text-right">
+          <%= f.label :password, "Password", class: "col-md-5 control-label" %>
+          <div class="col-md-4">
+            <%= f.password_field :password, placeholder: "Password must be at least 4 characters", class: "form-control" %>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+
+        <div class="form-group text-center">
+          <div class="col-md-4"></div>
+          <div class= "col-md-5"><%= f.submit %></div>
+          <div class="col-md-3 "></div>
+        </div >
+
+      <% end %>
+      <div class="form-group error-messages col-md-6">
       <% if @user.errors.any? %>
         <div>
           <h3>
@@ -11,48 +55,13 @@
           </h3>
           <ul>
             <% @user.errors.full_messages.each do |message| %>
-            <li><h5><%= message %></h5></li>
+              <li><h5><%= message %></h5></li>
             <% end %>
           </ul>
         </div>
-      <% end %>
-    </div>
-
-    <div class="form-group text-right">
-      <%= f.label :username, "Username", class: "col-md-4 control-label" %>
-      <div class="col-md-5">
-        <%= f.text_field :username, class: "form-control" %>
+        <% end %>
+        </div>
       </div>
-      <div class="col-md-3"></div>
     </div>
-
-    <div class="form-group text-right">
-      <%= f.label :email, "Email", class: "col-md-4 control-label" %>
-      <div class="col-md-5">
-        <%= f.text_field :email, class: "form-control" %>
-      </div>
-      <div class="col-md-3"></div>
-    </div>
-
-    <div class="form-group text-right">
-      <%= f.label :password, "Password", class: "col-md-4 control-label" %>
-      <div class="col-md-5">
-        <%= f.password_field :password, class: "form-control" %>
-      </div>
-      <div class="col-md-3"></div>
-    </div>
-
-
-    <div class="form-group text-center">
-      <div class="col-md-4"></div>
-      <div class= "col-md-5"><%= f.submit %></div>
-      <div class="col-md-3 "></div>
-    </div >
-
-
-
-  <% end %>
   </div>
-<div class="container-fluid">
-
 </div>
