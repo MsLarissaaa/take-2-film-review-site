@@ -40,7 +40,6 @@ GEM
     autoprefixer-rails (6.0.3)
       execjs
       json
-    bcrypt (3.1.10)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -151,7 +150,6 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  bcrypt (~> 3.1.7)
   better_errors
   binding_of_caller
   bootstrap-sass
@@ -168,4 +166,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.5
+   1.10.6
