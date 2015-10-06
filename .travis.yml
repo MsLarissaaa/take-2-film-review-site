@@ -1,6 +1,12 @@
 before_install:
-  - gem update --system
-  - gem --version
+  - gem install bundler
+  - "rm ${BUNDLE_GEMFILE}.lock"
+
+before_script:
+  - bundle update
+
+notifications:
+  email: false
 
 language: ruby
 rvm:
