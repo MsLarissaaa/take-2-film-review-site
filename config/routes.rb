@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get "logout" => "sessions#destroy"
 
   get "films" => "films#index"
-  get "films/:id" => "films#show"
+  get "films/:id" => "films#show", as: "film"
 
   post "films/:film_id/reviews" => "reviews#create"
   delete "films/:film_id/reviews/:id" => "reviews#destroy"
