@@ -72,13 +72,44 @@ films.each do |film|
   end
 end
 
-Genre.create!([
-  {title: "drama", description: "go get the tissues"},
-  {title: "comedy", description: "laugh and laugh"}
+genres = Genre.create!([
+  {title: "drama", description: "this is intense."},
+  {title: "comedy", description: "laugh out loud"},
+  {title: "action", description: "hold onto your popcorn!"},
+  {title: "children's", description: "fun for the whole family"},
+  {title: "biopic", description: "interesting films about interesting people with interesting lives"},
+  {title: "documentary", description: "wow. you are SO aware."},
+  {title: "historical drama", description: "strange and wonderful things happened in the past"},
+  {title: "sci-fi & fantasy", description: "the weird worlds that could be"}
   ])
 
-FilmGenre.create!([
-  {film_id: 1, genre_id: 1},
-  {film_id: 2, genre_id: 2}
+film_genres = FilmGenre.create!([
+  {:film => Film.find_by_title("Trainwreck"), :genre => Genre.find_by_title("comedy")},
+  {:film => Film.find_by_title("The Martian"), :genre => Genre.find_by_title("action")},
+  {:film => Film.find_by_title("The Martian"), :genre => Genre.find_by_title("drama")},
+  {:film => Film.find_by_title("The Martian"), :genre => Genre.find_by_title("sci-fi & fantasy")},
+  {:film => Film.find_by_title("Straight Outta Compton"), :genre => Genre.find_by_title("biopic")},
+  {:film => Film.find_by_title("Straight Outta Compton"), :genre => Genre.find_by_title("drama")},
+  {:film => Film.find_by_title("Mad Max: Fury Road"), :genre => Genre.find_by_title("action")},
+  {:film => Film.find_by_title("Mad Max: Fury Road"), :genre => Genre.find_by_title("sci-fi & fantasy")},
+  {:film => Film.find_by_title("Steve Jobs"), :genre => Genre.find_by_title("biopic")},
+  {:film => Film.find_by_title("Steve Jobs"), :genre => Genre.find_by_title("drama")},
+  {:film => Film.find_by_title("This Changes Everything"), :genre => Genre.find_by_title("documentary")},
+  {:film => Film.find_by_title("Suffragette"), :genre => Genre.find_by_title("historical drama")},
+  {:film => Film.find_by_title("The Hunger Games: Mockingjay - Part 2"), :genre => Genre.find_by_title("action")},
+  {:film => Film.find_by_title("The Hunger Games: Mockingjay - Part 2"), :genre => Genre.find_by_title("sci-fi & fantasy")},
+  {:film => Film.find_by_title("Inside Out"), :genre => Genre.find_by_title("children's")},
+  {:film => Film.find_by_title("Selma"), :genre => Genre.find_by_title("historical drama")},
+  {:film => Film.find_by_title("Selma"), :genre => Genre.find_by_title("biopic")},
+  {:film => Film.find_by_title("The Hobbit: The Battle of Five Armies"), :genre => Genre.find_by_title("action")},
+  {:film => Film.find_by_title("The Hobbit: The Battle of Five Armies"), :genre => Genre.find_by_title("sci-fi & fantasy")},
+  {:film => Film.find_by_title("The Hobbit: The Battle of Five Armies"), :genre => Genre.find_by_title("children's")},
+  {:film => Film.find_by_title("The Revenant"), :genre => Genre.find_by_title("action")},
+  {:film => Film.find_by_title("The Revenant"), :genre => Genre.find_by_title("historical drama")},
+  {:film => Film.find_by_title("The Intern"), :genre => Genre.find_by_title("comedy")},
+  {:film => Film.find_by_title("Black Mass"), :genre => Genre.find_by_title("biopic")},
+  {:film => Film.find_by_title("Black Mass"), :genre => Genre.find_by_title("drama")},
+  {:film => Film.find_by_title("No Country for Old Men"), :genre => Genre.find_by_title("drama")},
+  {:film => Film.find_by_title("Revolutionary Road"), :genre => Genre.find_by_title("drama")}
   ])
 
