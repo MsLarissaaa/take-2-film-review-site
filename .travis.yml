@@ -1,14 +1,14 @@
-before_install:
-  - gem install bundler
-  - "rm ${BUNDLE_GEMFILE}.lock"
+# before_install:
+#   - gem install bundler
+#   - "rm ${BUNDLE_GEMFILE}.lock"
 
-before_script:
-  - bundle update
+# before_script:
+#   - bundle update
 
 notifications:
   email: false
 
-bundler_args: --without test --jobs 3 --retry 3
+# bundler_args: --without test --jobs 3 --retry 3
 
 language: ruby
 rvm:
