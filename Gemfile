@@ -15,15 +15,14 @@ gem 'bcrypt'
 group :development, :test do
   gem 'rake'
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'spring'
-  gem 'rspec-rails'
-end
+  gem 'spring'end
 
 group :test do
   gem 'rspec'

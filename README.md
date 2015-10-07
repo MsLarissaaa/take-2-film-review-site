@@ -1,7 +1,26 @@
 [![Build Status](https://travis-ci.org/MsLarissaaa/take-2-film-review-site.svg)](https://travis-ci.org/MsLarissaaa/take-2-film-review-site)
 
-Team members: Greg, Larissa, Rodica 
-App live at: http://take2moviereview.herokuapp.com/
+
+### Take-2-Film-Reviews
+  - Take-2-Film-Reviews is an application showcasing films which allows members
+to create reviews for films. In addition to creating a review on a film, a
+member also has the ability to rate a movie "good" or "bad", as well as place
+a comment on a review that has been previously been made. Non members of
+the application have the ability to see movie posters and descriptions as
+well as see reviews and comments that have been made. Becoming a member of
+the application is as simple as filling in a form with a few credentials. If
+you are planning to join, and you are a member of another professional
+film review publication, make sure to sign up with your industry email
+domain to receive 'trusted reviewer' status. Enjoy.
+
+### Team members
+- Greg: <a href="https://github.com/gptasinski">github.com/gptasinski</a>
+- Larissa: : <a href="https://github.com/trodicaro">github.com/trodicaro</a>
+- Rodica: : <a href="https://github.com/MsLarissaaa">github.com/MsLarissaaa</a>
+- Application live at: http://take2moviereview.herokuapp.com/
+
+### Database Schema
+![database schema](./database_schema_draft3.png)
 
 ### Signup / Login
 - As a user I want to be able to sign up so I can have access to full functionality of the app.
@@ -28,4 +47,4 @@ App live at: http://take2moviereview.herokuapp.com/
 - As a non-looged in user I should not be able to vote on reviews or films.
 
 ### Stretch
-- As a user I want to see a link to my profile on the home page. 
+- As a user I want to see a link to my profile on the home page.

@@ -25,6 +25,11 @@ class FilmsController < ApplicationController
     @documentary_slices = Genre.make_slices(@documentary)
     @biopic_slices = Genre.make_slices(@biopic)
     @childrens_slices = Genre.make_slices(@childrens)
+
+    films = Film.all
+    @best_films = films.sort_by{ |film| Film.approval_rating(film.title) }.reverse
+    rows = @best_films.length / 4
+    @best_slices = Array.new(rows) {@best_films.shift(4)}
   end
 
   def show
