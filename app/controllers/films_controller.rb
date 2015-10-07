@@ -5,7 +5,7 @@ class FilmsController < ApplicationController
 
   def index
     @films = Film.all.sort_by{ |film| film.release_date }.reverse
-    rows = @films.length % 4
+    rows = @films.length / 4
     @film_slices = Array.new(rows) {@films.shift(4)}
 
     @drama = Genre.find_by_title("drama")
