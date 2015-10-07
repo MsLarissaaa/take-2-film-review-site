@@ -4,6 +4,12 @@ class Film < ActiveRecord::Base
   has_many :genres, through: :film_genres
   has_many :ratings, as: :rateable
 
+  def self.film_slices
+    films = Film.all.sort_by{ |film| film.release_date }.reverse
+    rows = films.length / 4
+    Array.new(rows) {films.shift(4)}
+  end
+
   def self.approval_rating(film_name)
     film = self.find_by_title(film_name)
     total = film.ratings.count
@@ -20,5 +26,12 @@ class Film < ActiveRecord::Base
     else
       "Bad"
     end
+  end
+
+  def self.best_slices
+    films = self.all
+    best_films = films.sort_by{ |film| Film.approval_rating(film.title) }.reverse
+    rows = best_films.length / 4
+    Array.new(rows) {best_films.shift(4)}
   end
 end

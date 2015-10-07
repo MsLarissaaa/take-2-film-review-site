@@ -18,7 +18,7 @@ review_options =
     "My girlfriend dragged me to see this when I didn't want to go, but as usual, she was totally right and I loved it. Great film!",
     "What happened to this producer? Their work used to be so good! Save your money and skip this film.",
     "Three thumbs way, way up! This film does so much for the triple-thumbed community. We're out of the shadows and enthusiastically expressing approval all over the place!",
-    "I LOVE Charlize Theron. I'm a randomly-generated review, so I don't know whether or not she's actually in this movie, but in any case, she should be.",
+    "I LOVE Charlize Theron. I'm a randomly-generated review, so I don't know whether she's actually in this movie or not, but in any case, she should be.",
     "This movie rocked my socks off. All the cool people should def go see it.",
     "Thrilled? Moved? Inspired? ENTERTAINED??! Why yes, yes I was."
   ]
