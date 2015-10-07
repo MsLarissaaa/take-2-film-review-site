@@ -1,0 +1,106 @@
+<div class="container">
+  <p><span title="<%= @drama.description %>"> Dramas </p>
+  <% @drama_slices.each do |slice| %>
+    <div class="row">
+      <% slice.each do |film| %>
+        <div class="col-md-3"><ul style="list-style-type:none">
+          <li><%= link_to film_path(film) do %>
+            <%= image_tag(film.thumb_url) %>
+          <% end %></li>
+          <li><%= film.title %></li></ul>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <p><span title="<%= @comedy.description %>"> Comedy </p>
+  <% @comedy_slices.each do |slice| %>
+    <div class="row">
+      <% slice.each do |film| %>
+        <div class="col-md-3"><ul style="list-style-type:none">
+          <li><%= link_to film_path(film) do %>
+            <%= image_tag(film.thumb_url) %>
+          <% end %></li>
+          <li><%= film.title %></li></ul>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <p><span title="<%= @action.description %>"> Action </p>
+  <% @action_slices.each do |slice| %>
+    <div class="row">
+      <% slice.each do |film| %>
+        <div class="col-md-3"><ul style="list-style-type:none">
+          <li><%= link_to film_path(film) do %>
+            <%= image_tag(film.thumb_url) %>
+          <% end %></li>
+          <li><%= film.title %></li></ul>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <p><span title="<%= @scifi.description %>"> Sci-Fi and Fantasy </p>
+  <% @scifi_slices.each do |slice| %>
+    <div class="row">
+      <% slice.each do |film| %>
+        <div class="col-md-3"><ul style="list-style-type:none">
+          <li><%= link_to film_path(film) do %>
+            <%= image_tag(film.thumb_url) %>
+          <% end %></li>
+          <li><%= film.title %></li></ul>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <p><span title="<%= @historical.description %>"> Historical Dramas </p>
+  <% @historical_slices.each do |slice| %>
+    <div class="row">
+      <% slice.each do |film| %>
+        <div class="col-md-3"><ul style="list-style-type:none">
+          <li><%= link_to film_path(film) do %>
+            <%= image_tag(film.thumb_url) %>
+          <% end %></li>
+          <li><%= film.title %></li></ul>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <p><span title="<%= @documentary.description %>"> Documentaries </p>
+  <% @documentary_slices.each do |slice| %>
+    <div class="row">
+      <% slice.each do |film| %>
+        <div class="col-md-3"><ul style="list-style-type:none">
+          <li><%= link_to film_path(film) do %>
+            <%= image_tag(film.thumb_url) %>
+          <% end %></li>
+          <li><%= film.title %></li></ul>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <p><span title="<%= @biopic.description %>"> Biopics </p>
+  <% @biopic_slices.each do |slice| %>
+    <div class="row">
+      <% slice.each do |film| %>
+        <div class="col-md-3"><ul style="list-style-type:none">
+          <li><%= link_to film_path(film) do %>
+            <%= image_tag(film.thumb_url) %>
+          <% end %></li>
+          <li><%= film.title %></li></ul>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <p><span title="<%= @childrens.description %>"> Children and Family Friendly </p>
+  <% @childrens_slices.each do |slice| %>
+    <div class="row">
+      <% slice.each do |film| %>
+        <div class="col-md-3"><ul style="list-style-type:none">
+          <li><%= link_to film_path(film) do %>
+            <%= image_tag(film.thumb_url) %>
+          <% end %></li>
+          <li><%= film.title %></li></ul>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
