@@ -1,0 +1,2 @@
+$("#task-form").fadeOut(250).delay(250).html("");
+$("#comments").prepend("<li><%= escape_javascript @comment.content %></li>")
