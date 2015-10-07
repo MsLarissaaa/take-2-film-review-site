@@ -1,17 +1,41 @@
-<div class="container">
-  <% @film_slices.each do |slice| %>
-    <div class="row">
-      <% slice.each do |film| %>
-        <div class="col-md-3"><ul style="list-style-type:none">
-          <li><%= link_to film_path(film) do %>
-            <%= image_tag(film.thumb_url) %>
-          <% end %></li>
-          <li><%= film.title %></li></ul>
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1"><span>Newly Released</span></a></li>
+    <li><a href="#tabs-2"><span>Sort By Genre</span></a></li>
+    <li><a href="#tabs-3"><span>Top-Rated Films</span></a></li>
+  </ul>
+  <div id="tabs-1">
+    <div class="container">
+      <% @film_slices.each do |slice| %>
+        <div class="row">
+          <% slice.each do |film| %>
+            <div class="col-md-3"><ul style="list-style-type:none">
+              <li><%= link_to film_path(film) do %>
+                <%= image_tag(film.thumb_url) %>
+              <% end %></li>
+              <li><%= film.title %></li></ul>
+            </div>
+          <% end %>
         </div>
       <% end %>
     </div>
-  <% end %>
+  </div>
+  <div id="tabs-2">
+    <%= render partial: "films_genre" %>
+  </div>
+  <div id="tabs-3">
+    <%= render partial: "films_best" %>
+  </div>
 </div>
+
+<script>
+
+</script>
+
+
+
+
+
 
 
 

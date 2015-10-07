@@ -16,9 +16,11 @@
 //= require_tree .
 
 
+
 // $(function(){
 //   $("#new-comment").on("ajax:success", function(e, data, status, xhr){
 //     $("#task-form").append(data).show();
 //   });
 
 // });
+
