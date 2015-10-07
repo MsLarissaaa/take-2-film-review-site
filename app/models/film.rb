@@ -34,4 +34,8 @@ class Film < ActiveRecord::Base
     rows = best_films.length / 4
     Array.new(rows) {best_films.shift(4)}
   end
+
+  # def self.find_genres
+  #   self.genres.map{|genre| genre.title}.join(", ")
+  # end
 end

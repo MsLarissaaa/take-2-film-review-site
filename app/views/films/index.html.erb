@@ -1,9 +1,15 @@
 <div id="tabs">
-  <ul>
-    <li><a href="#tabs-1"><span>Newly Released</span></a></li>
-    <li><a href="#tabs-2"><span>Sort By Genre</span></a></li>
-    <li><a href="#tabs-3"><span>Top-Rated Films</span></a></li>
-  </ul>
+  <div class="row movie-order">
+    <div class="col-md-3"></div>
+    <div class="col-md-3"></div>
+    <div class="col-md-6 text-center genre-link">
+    <ul>
+      <li><a href="#tabs-1"><span>Newly Released</span></a></li>
+      <li><a href="#tabs-2"><span>Sort By Genre</span></a></li>
+      <li><a href="#tabs-3"><span>Top-Rated Films</span></a></li>
+    </ul>
+    </div>
+  </div>
   <div id="tabs-1">
     <div class="container">
       <% @film_slices.each do |slice| %>
