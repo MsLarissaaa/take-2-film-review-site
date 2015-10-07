@@ -8,6 +8,14 @@ class FilmsController < ApplicationController
     rows = @films.length % 4
     @film_slices = Array.new(rows) {@films.shift(4)}
 
+    # This code is a HUGE smell.
+    # What your model should return is a hash with keys of the genre and collections
+    # of the slices as values and serve that up to your front end
+
+    # so genre would have a method called Genre.retrieve_slices or something
+    # and the work of building a hash of the format:
+    # { "drama" => [ [<film object 1>, <film object 2>, <film object 3>, <film object 4>], [...more films] ],
+    #   "comedy" => [ [<film object 1>, <film object 2>, <film object 3>, <film object 4>], [...more films] ]}
     @drama = Genre.find_by_title("drama")
     @comedy = Genre.find_by_title("comedy")
     @action = Genre.find_by_title("action")

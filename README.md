@@ -1,3 +1,5 @@
+### This needs more info.  How to set up the app, dependencies if any, etc. 
+
 [![Build Status](https://travis-ci.org/MsLarissaaa/take-2-film-review-site.svg)](https://travis-ci.org/MsLarissaaa/take-2-film-review-site)
 
 Team members: Greg, Larissa, Rodica 
