@@ -24,8 +24,9 @@
             <% review.comments.each do |comment| %>
               <li><%= comment.content %></li>
             <% end %>
-
+            <% if current_user %>
             <%= link_to "Add Comment", new_film_review_comment_path(@film, review), id: 'new-comment', remote: true %>
+            <% end %>
             <div id="task-form"></div>
 
           </ul>
