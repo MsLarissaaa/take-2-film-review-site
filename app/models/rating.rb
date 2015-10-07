@@ -4,4 +4,5 @@ class Rating < ActiveRecord::Base
   belongs_to :film
 
   belongs_to :rateable, polymorphic: true
+
 end

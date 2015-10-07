@@ -1,0 +1,14 @@
+<div class="container">
+  <% @best_slices.each do |slice| %>
+    <div class="row">
+      <% slice.each do |film| %>
+        <div class="col-md-3"><ul style="list-style-type:none">
+          <li><%= link_to film_path(film) do %>
+            <%= image_tag(film.thumb_url) %>
+          <% end %></li>
+          <li><%= film.title %><br><%= Film.rated(film.title) %></li></ul>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
