@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+# Good work on cleaning this up
   root "films#index"
 
   get "signup" => "users#new", as: "new_user"
