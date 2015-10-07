@@ -1,7 +1,12 @@
 [![Build Status](https://travis-ci.org/MsLarissaaa/take-2-film-review-site.svg)](https://travis-ci.org/MsLarissaaa/take-2-film-review-site)
 
-Team members: Greg, Larissa, Rodica 
-App live at: http://take2moviereview.herokuapp.com/
+
+### Take-2-Film-Reviews
+Team members:
+  Greg: <a href="https://github.com/gptasinski">github.com/gptasinski</a>
+  Larissa: : <a href="https://github.com/trodicaro">github.com/trodicaro</a>
+  Rodica: : <a href="https://github.com/MsLarissaaa">github.com/MsLarissaaa</a>
+Application live at: http://take2moviereview.herokuapp.com/
 
 ### Signup / Login
 - As a user I want to be able to sign up so I can have access to full functionality of the app.
@@ -28,4 +33,4 @@ App live at: http://take2moviereview.herokuapp.com/
 - As a non-looged in user I should not be able to vote on reviews or films.
 
 ### Stretch
-- As a user I want to see a link to my profile on the home page. 
+- As a user I want to see a link to my profile on the home page.
