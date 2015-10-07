@@ -20,7 +20,7 @@ domain to receive 'trusted reviewer' status. Enjoy.
 - Application live at: http://take2moviereview.herokuapp.com/
 
 ### Database Schema
-![database schema](database_schema_draft3.png)
+![database schema](./database_schema_draft3.png)
 
 ### Signup / Login
 - As a user I want to be able to sign up so I can have access to full functionality of the app.
