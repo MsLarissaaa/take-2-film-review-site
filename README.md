@@ -2,11 +2,22 @@
 
 
 ### Take-2-Film-Reviews
+  - Take-2-Film-Reviews is an application showcasing films which allows members
+to create reviews for films. In addition to creating a review on a film, a
+member also has the ability to rate a movie "good" or "bad", as well as place
+a comment on a review that has been previously been made. Non members of
+the application have the ability to see movie posters and descriptions as
+well as see reviews and comments that have been made. Becoming a member of
+the application is as simple as filling in a form with a few credentials. If
+you are planning to join, and you are a member of another professional
+film review publication, make sure to sign up with your industry email
+domain to receive 'trusted reviewer' status. Enjoy.
+
 Team members:
-  Greg: <a href="https://github.com/gptasinski">github.com/gptasinski</a>
-  Larissa: : <a href="https://github.com/trodicaro">github.com/trodicaro</a>
-  Rodica: : <a href="https://github.com/MsLarissaaa">github.com/MsLarissaaa</a>
-Application live at: http://take2moviereview.herokuapp.com/
+- Greg: <a href="https://github.com/gptasinski">github.com/gptasinski</a>
+- Larissa: : <a href="https://github.com/trodicaro">github.com/trodicaro</a>
+- Rodica: : <a href="https://github.com/MsLarissaaa">github.com/MsLarissaaa</a>
+- Application live at: http://take2moviereview.herokuapp.com/
 
 ### Signup / Login
 - As a user I want to be able to sign up so I can have access to full functionality of the app.
