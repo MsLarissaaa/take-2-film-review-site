@@ -50,10 +50,10 @@ users = User.create!([
   {username: "greg", email: "greg@email.com", password: "password", trusted: "untrusted", admin: false},
   {username: "larissa", email: "larissa@email.com", password: "password", trusted: "untrusted", admin: false},
   {username: "lucas", email: "lucas@email.com", password: "password", trusted: "untrusted", admin: false},
-  {username: "cicadavid", email: "cicadavid@trustedemail.com", password: "password", trusted: "trusted", admin: false},
-  {username: "lasalle", email: "lasalle@trustedemail.com", password: "password", trusted: "trusted", admin: false},
-  {username: "felicia", email: "felicia@trustedemail.com", password: "password", trusted: "trusted", admin: false},
-  {username: "jackson", email: "jackson@trustedemail.com", password: "password", trusted: "trusted", admin: false}
+  {username: "cicadavid", email: "cicadavid@nytimes.com", password: "password", trusted: "trusted", admin: false},
+  {username: "lasalle", email: "lasalle@chicagoreader.com", password: "password", trusted: "trusted", admin: false},
+  {username: "felicia", email: "felicia@suntimes.com", password: "password", trusted: "trusted", admin: false},
+  {username: "jackson", email: "jackson@chicagotribune.com", password: "password", trusted: "trusted", admin: false}
   ])
 
 films = Film.create!([
@@ -100,10 +100,10 @@ genres = Genre.create!([
   {title: "drama", description: "this is intense."},
   {title: "comedy", description: "laugh out loud"},
   {title: "action", description: "hold onto your popcorn!"},
-  {title: "children's", description: "fun for the whole family"},
+  {title: "children's", description: "fun for the whole family!"},
   {title: "biopic", description: "interesting films about interesting people with interesting lives"},
   {title: "documentary", description: "wow. you are SO aware."},
-  {title: "historical drama", description: "strange and wonderful things happened in the past"},
+  {title: "historical drama", description: "strange and wonderful things that happened in the past"},
   {title: "sci-fi & fantasy", description: "the weird worlds that could be"}
   ])
 
