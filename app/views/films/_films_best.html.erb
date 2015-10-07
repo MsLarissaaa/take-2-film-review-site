@@ -6,7 +6,7 @@
           <li><%= link_to film_path(film) do %>
             <%= image_tag(film.thumb_url) %>
           <% end %></li>
-          <li><%= film.title %><br><%= Film.rated(film.title) %></li></ul>
+          <li><%= film.title %><br><%= Film.rated(film.title) %><% if Film.rated(film.title) == "Good" %> <%= image_tag 'smiley_face.png' %><% elsif Film.rated(film.title) == "Bad" %><%= image_tag 'frowny_face.png' %><% else %><%end%></li></ul>
         </div>
       <% end %>
     </div>

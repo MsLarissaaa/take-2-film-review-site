@@ -8,9 +8,9 @@
     </div>
 
     <div class="media-body">
-    <h3 class="media-heading"><%= @film.title %><small> released: <%= @film.release_date %></small></h3>
+    <h3 class="media-heading"><%= @film.title %><small> released: <%= @film.release_date %></small><small> approval rating: <%= Film.approval_rating(@film.title) %>% <% if Film.rated(@film.title) == "Good" %> <%= image_tag 'smiley_face.png' %><% elsif Film.rated(@film.title) == "Bad" %><%= image_tag 'frowny_face.png' %><% else %><%end%></small><br><small><%= @film.genres.map{|genre| genre.title}.join(", ") %></small></h3>
 
-      <div id="film-description"><%= @film.description %></div>       
+      <div id="film-description"><%= @film.description %></div>
     </div>
 
   </div>
@@ -18,7 +18,7 @@
   <div id="film-reviews">
 
       <% @film.reviews.each do |review| %>
-        
+
         <h4><%= review.content %></h4>
           <ul id="comments">
             <% review.comments.each do |comment| %>

@@ -16,15 +16,11 @@ class FilmsController < ApplicationController
     @childrens_slices = Genre.retrieve_slices("children's")
 
     @best_slices = Film.best_slices
+
   end
 
   def show
     @film = Film.find(params[:id])
   end
 
-  def tab
-    respond_to do |format|
-      format.js
-    end
-  end
 end
