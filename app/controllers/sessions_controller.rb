@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_to "/films"
 
     else
-      @error_message =  "please enter info into both fields"
+      @error_message =  "Please enter info into both fields"
       render 'new'
     end
   end
